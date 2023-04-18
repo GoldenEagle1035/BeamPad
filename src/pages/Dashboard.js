@@ -13,7 +13,7 @@ const Dashboard = () => {
 
     return (
         <div className="flex flex-col gap-[10px] p-[20px]">
-            <div className="relative rounded-lg bg-[#dc275150]">
+            <div className="relative rounded-xl bg-[#dc275150]">
                 <img className="w-full h-[300px] object-cover rounded" src={bannerImg} alt="" />
                 <div className="absolute top-16 left-16 w-auto text-4xl font-bold text-white">Buy Your First Real Estate in Seconds</div>
                 <div className="absolute top-28 left-16 w-auto text-2xl text-white">The world’s first NFT marketplace backed by real-world properties</div>

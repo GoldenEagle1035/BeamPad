@@ -1,4 +1,6 @@
 
+import { useNavigate } from 'react-router-dom';
+
 import { 
     AccountCircle, 
     Home, 
@@ -16,9 +18,12 @@ import {
 } from '@mui/icons-material';
 
 const LeftMenu = () => {
+
+    const navigate = useNavigate();
+
     return (
         <div className="w-[200px] flex flex-col gap-[20px] p-[5px] bg-gray-100">
-            <div className='flex flex-row gap-[5px] mt-[10px] items-center'>
+            <div className='flex flex-row gap-[5px] mt-[10px] items-center hover:cursor-pointer' onClick={(e)=> {navigate("profile")}}>
                 <AccountCircle sx={{ color: '#dc2751', fontSize: 50 }} />
                 <div className='flex flex-col'>
                     <div className="text-sm font-bold text-black">Demo Account</div>
