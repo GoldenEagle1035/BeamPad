@@ -1,19 +1,36 @@
 
-import { Wallet } from '@mui/icons-material';
+import { useNavigate } from 'react-router-dom';
 
-import logo from '../assets/images/logo.webp';
+import { Wallet, Search, Notifications, Settings, AccountCircle, ExpandMore } from '@mui/icons-material';
+
+import logo from '../assets/images/cropped-1logo.png';
 
 const TopMenu = () => {
+
+    const navigate = useNavigate();
+
     return (
-        <div className="flex justify-between p-[20px] items-center border-b border-b-gray-100">
-            <div>
-                <img className="w-auto h-[50px]" src={logo} alt="" />
+        <div className="flex justify-between pl-[50px] lg:pl-[30px] pr-[10px] lg:pr-[30px] py-[10px] bg-[#ebf4f3] items-center">
+            <div className='flex flex-row gap-[50px] items-center'>
+                <img className="w-auto h-[40px] hover:cursor-pointer" src={logo} alt="" onClick={(e) => { navigate("/") }} />
+                <div className='hidden lg:flex flex-row items-center'>
+                    <Search className='text-gray-400' sx={{ fontSize: 25 }} />
+                    <input type="text" placeholder="Search campain, donor, and more..." className="w-[300px] p-[2px] focus:outline-none bg-transparent text-black text-base" />
+                </div>
             </div>
-            <div>
-                <button className="w-auto h-[35px] flex p-[5px] border rounded bg-[#dc2751] text-white text-base">
-                    <Wallet className="mr-[10px]"/>
-                    <div>Connect Wallet</div>
-                </button>
+            <div className='flex flex-row items-center'>
+                <div className='flex flex-row gap-[20px] items-center ml-[20px]'>
+                    <div className='hidden lg:flex flex-row gap-[20px] items-center'>
+                        <Notifications className="hover:cursor-pointer" sx={{ fontSize: 20 }} />
+                        <Settings className="hover:cursor-pointer" sx={{ fontSize: 20 }} />
+                    </div>
+                    <div className='flex flex-row gap-[5px] items-center hover:cursor-pointer'>
+                        <button className="flex p-[10px] rounded-full bg-[#377eff] text-white text-base">
+                            <Wallet sx={{ fontSize: 20 }} />
+                        </button>
+                        <ExpandMore className='text-gray-300' />
+                    </div>
+                </div>
             </div>
         </div>
     )

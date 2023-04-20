@@ -105,8 +105,8 @@ export const price_chart_data = {
             fill: true,
             label: 'All Time Avg. Price USD 5,2000',
             data: values,
-            borderColor: '#dc2751',
-            backgroundColor: '#dc275150',
+            borderColor: '#377eff',
+            backgroundColor: '#377eff50',
         },
     ],
 };
@@ -121,8 +121,8 @@ export const profit_chart_data = {
             fill: true,
             label: 'Profit',
             data: values_profit,
-            borderColor: '#dc2751',
-            backgroundColor: '#dc275150',
+            borderColor: '#377eff',
+            backgroundColor: '#377eff50',
         },
     ],
 };
@@ -134,106 +134,107 @@ const Detailboard = () => {
     }, [])
 
     return (
-        <div className="flex flex-col">
+        <div className="flex flex-col w-full">
             <div className="flex flex-col">
-                <div className="flex flex-row gap-[20px] m-[20px]">
-                    <div className="relative w-7/12 h-[500px] rounded-lg overflow-hidden">
+                <div className="flex flex-col lg:flex-row gap-[20px] m-[20px]">
+                    <div className="relative w-full lg:w-7/12 h-[300px] lg:h-[500px] rounded-lg overflow-hidden">
                         <img className="w-full h-full object-cover" src={house_1} alt="" />
-                        <Favorite className="absolute top-5 right-5 p-[5px] rounded-full bg-white text-base font-bold text-[#dc2751]" />
+                        <Favorite className="absolute top-5 right-5 p-[5px] rounded-full bg-white text-base font-bold text-[#377eff] hover:cursor-pointer" />
                     </div>
-                    <div className="w-5/12 flex flex-col gap-[15px]">
+                    <div className="w-full lg:w-5/12 flex flex-col gap-[20px]">
                         <div className="flex flex-row justify-between">
-                            <div className="flex flex-row gap-[5px] rounded-full border border-[#dc2751] p-[5px] justify-center items-center">
-                                <Bed className="text-[#dc2751]" sx={{ fontSize: 30 }} />
-                                <div className="text-[#dc2751] text-base">5 Beds | 2,9990 sqft</div>
+                            <div className="flex flex-row gap-[5px] rounded-full border border-[#377eff] p-[5px] justify-center items-center">
+                                <Bed className="text-[#377eff]" sx={{ fontSize: 30 }} />
+                                <div className="text-[#377eff] text-base">5 Beds | 2,9990 sqft</div>
                             </div>
-                            <Share className="text-black" sx={{ fontSize: 30 }} />
+                            <Share className="text-gray-700 hover:cursor-pointer" sx={{ fontSize: 30 }} />
                         </div>
-                        <div className="text-4xl font-bold text-black">Beautiful 5-Bedroom Villa with an Incredible View</div>
+                        <div className="text-basic font-bold text-gray-700 py-[10px]">Beautiful 5-Bedroom Villa with an Incredible View</div>
                         <div className="flex flex-row justify-between">
                             <div className="flex flex-row gap-[5px] items-center">
-                                <Groups sx={{ fontSize: 30 }} />
-                                <div className="text-base text-black">800 Owners</div>
+                                <Groups sx={{ fontSize: 20 }} />
+                                <div className="text-xs text-gray-700">800 Owners</div>
                             </div>
                             <div className="flex flex-row gap-[5px] items-center">
-                                <PhotoLibrary sx={{ fontSize: 30 }} />
-                                <div className="text-base text-black">1000 Total NFTs</div>
+                                <PhotoLibrary sx={{ fontSize: 20 }} />
+                                <div className="text-xs text-gray-700">1000 Total NFTs</div>
                             </div>
                             <div className="flex flex-row gap-[5px] items-center">
-                                <Visibility sx={{ fontSize: 30 }} />
-                                <div className="text-base text-black">0 Views</div>
+                                <Visibility sx={{ fontSize: 20 }} />
+                                <div className="text-xs text-gray-700">0 Views</div>
                             </div>
                             <div className="flex flex-row gap-[5px] items-center">
-                                <Favorite sx={{ fontSize: 30 }} />
-                                <div className="text-base text-black">280 Favorites</div>
+                                <Favorite sx={{ fontSize: 20 }} />
+                                <div className="text-xs text-gray-700">280 Favorites</div>
                             </div>
                         </div>
-                        <div className="flex flex-row gap-[5px] itemx-center">
-                            <Place className='text-[#dc2751]' sx={{ fontSize: 30 }} />
-                            <div className="text-xl text-gray-400">Los Angeles, United States of America</div>
+                        <div className="flex flex-row gap-[5px] items-center">
+                            <Place className='text-[#377eff]' sx={{ fontSize: 20 }} />
+                            <div className="text-sm text-gray-400">Los Angeles, United States of America</div>
                         </div>
                         <div className="flex flex-row gap-[20px]">
-                            <div className="w-1/2 flex flex-col gap-[20px] p-[20px] border border-gray-500 rounded-lg">
-                                <div className="text-sm text-black">Property price</div>
+                            <div className="w-1/2 flex flex-col gap-[20px] p-[20px] border border-gray-300 rounded-lg">
+                                <div className="text-sm text-gray-700">Property price</div>
                                 <div className="flex flex-row justify-between">
-                                    <div className="text-lg font-bold text-black">5,200,000 USD</div>
+                                    <div className="text-sm font-bold text-gray-700">5,200,000 USD</div>
                                     <Domain className="text-gray-300" sx={{ fontSize: 40 }} />
                                 </div>
                             </div>
-                            <div className="w-1/2 flex flex-col gap-[20px] p-[20px] border border-gray-500 rounded-lg">
-                                <div className="text-sm text-black">Dividend Yield</div>
+                            <div className="w-1/2 flex flex-col gap-[20px] p-[20px] border border-gray-300 rounded-lg">
+                                <div className="text-sm text-gray-700">Dividend Yield</div>
                                 <div className="flex flex-row justify-between">
-                                    <div className="text-lg font-bold text-black">7.79%</div>
+                                    <div className="text-sm font-bold text-gray-700">7.79%</div>
                                     <AutoGraph className="text-gray-300" sx={{ fontSize: 40 }} />
                                 </div>
                             </div>
                         </div>
                         <div className="flex flex-row gap-[20px]">
-                            <div className="w-1/2 flex flex-col gap-[20px] p-[20px] border border-gray-500 rounded-lg">
-                                <div className="text-sm text-black">5 YR Expected return</div>
+                            <div className="w-1/2 flex flex-col gap-[20px] p-[20px] border border-gray-300 rounded-lg">
+                                <div className="text-sm text-gray-700">5 YR Expected return</div>
                                 <div className="flex flex-row justify-between">
-                                    <div className="text-lg font-bold text-black">49%</div>
+                                    <div className="text-sm font-bold text-gray-700">49%</div>
                                     <Money className="text-gray-300" sx={{ fontSize: 40 }} />
                                 </div>
                             </div>
-                            <div className="w-1/2 flex flex-col gap-[20px] p-[20px] border border-gray-500 rounded-lg">
-                                <div className="text-sm text-black">Value of One NFT</div>
+                            <div className="w-1/2 flex flex-col gap-[20px] p-[20px] border border-gray-300 rounded-lg">
+                                <div className="text-sm text-gray-700">Value of One NFT</div>
                                 <div className="flex flex-row justify-between">
-                                    <div className="text-lg font-bold text-black">10/1000</div>
+                                    <div className="text-sm font-bold text-gray-700">10/1000</div>
                                     <Photo className="text-gray-300" sx={{ fontSize: 40 }} />
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
                 <div className="flex flex-col gap-[20px] m-[20px]">
-                    <div className="text-lg font-bold text-black">Price history</div>
-                    <div className="flex flex-row gap-[20px]">
-                        <div className="w-1/2">
+                    <div className="text-lg font-bold text-gray-700">Price history</div>
+                    <div className="flex flex-col lg:flex-row gap-[20px]">
+                        <div className="w-full lg:w-1/2">
                             <Line options={price_chart_options} data={price_chart_data} />
                         </div>
-                        <div className="w-1/2 flex flex-col gap-[20px]">
+                        <div className="w-full lg:w-1/2 flex flex-col gap-[10px] lg:gap-[30px]">
                             <div className="text-basic text-gray-300">Current Price</div>
                             <div className="flex flex-row justify-between">
-                                <div className="flex items-center gap-[10px]">
-                                    <div className="text-4xl font-bold text-black">5,200</div>
-                                    <div className="text-2xl text-gray-300">(2.47ETH)</div>
+                                <div className="flex items-center gap-[5px] lg:gap-[10px]">
+                                    <div className="text-2xl font-bold text-gray-700">$5,200</div>
+                                    <div className="text-lg text-gray-300">(2.47ETH)</div>
                                 </div>
                                 <div className="flex items-center gap-[5px]">
-                                    <ArrowCircleUp sx={{ fontSize: 30 }} />
-                                    <input type="number" placeholder="0" className="p-[2px] text-black text-base border border-gray-300" />
-                                    <ArrowCircleDown sx={{ fontSize: 30 }} />
+                                    <ArrowCircleUp className="text-[#377eff] hover:cursor-pointer" sx={{ fontSize: 30 }} />
+                                    <input type="number" placeholder="0" className="p-[2px] w-[100px] focus:outline-none text-gray-700 text-base border border-gray-300" />
+                                    <ArrowCircleDown className="text-[#377eff] hover:cursor-pointer" sx={{ fontSize: 30 }} />
                                 </div>
                             </div>
-                            <button className="flex flex-row justify-center gap-[10px] p-[20px] rounded-lg bg-[#dc2751] text-basic font-bold text-2xl text-white items-center">
-                                <Wallet sx={{ fontSize: 30 }} />
-                                <div>Buy Now</div>
-                            </button>
-                            <button className="flex flex-row justify-center gap-[10px] p-[20px] rounded-lg bg-white border border-[#dc2751] text-2xl font-bold text-[#dc2751] items-center">
-                                <Sell sx={{ fontSize: 30 }} />
-                                <div>Make Offer</div>
-                            </button>
+                            <div className="flex flex-row gap-[20px] lg:gap-[50px] justify-center mt-[20px]">
+                                <button className="w-1/2 hover:cursor-pointer flex flex-row justify-center gap-[10px] px-[10px] py-[10px] rounded-lg bg-[#377eff] text-sm font-bold text-white items-center">
+                                    <Wallet sx={{ fontSize: 20 }} />
+                                    <div>Buy Now</div>
+                                </button>
+                                <button className="w-1/2 hover:cursor-pointer flex flex-row justify-center gap-[10px] px-[10px] py-[10px] rounded-lg bg-white border border-[#377eff] text-sm font-bold text-[#377eff] items-center">
+                                    <Sell sx={{ fontSize: 20 }} />
+                                    <div>Make Offer</div>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -244,26 +245,26 @@ const Detailboard = () => {
                                 expandIcon={<ExpandMore />}
                             >
                                 <div className="flex flex-row gap-[1px] items-center">
-                                    <Sell className="text-black" sx={{ fontSize: 30 }} />
-                                    <div className="text-lg font-bold text-black">Listing</div>
+                                    <Sell className="text-gray-700" sx={{ fontSize: 20 }} />
+                                    <div className="text-lg font-bold text-gray-700">Listing</div>
                                 </div>
                             </AccordionSummary>
                             <AccordionDetails>
                                 <div className="flex flex-col gap-[20px]">
                                     <div className="flex flex-row items-center mx-[10px]">
-                                        <div className="w-1/5 text-sm font-bold text-black">Price</div>
-                                        <div className="w-1/5 text-sm font-bold text-black">Ethereum</div>
-                                        <div className="w-1/5 text-sm font-bold text-black">Expiration</div>
-                                        <div className="w-1/5 text-sm font-bold text-black">From</div>
-                                        <div className="w-1/5 text-sm font-bold text-black"> </div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm font-bold text-gray-700">Price</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm font-bold text-gray-700">Ethereum</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm font-bold text-gray-700">Expiration</div>
+                                        <div className="hidden lg:flex w-1/5 text-sm font-bold text-gray-700">From</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm font-bold text-gray-700"> </div>
                                     </div>
                                     <div className="flex flex-row items-center mx-[10px]">
-                                        <div className="w-1/5 text-sm text-black">$ 5200</div>
-                                        <div className="w-1/5 text-sm text-black">2.88 ETH</div>
-                                        <div className="w-1/5 text-sm text-black">7 Days</div>
-                                        <div className="w-1/5 text-sm font-bold text-[#dc2751]">Gohard</div>
-                                        <div className="w-1/5">
-                                            <button className="rounded-xl bg-[#dc2751] p-[5px] text-sm font-bold text-white">BUY NOW</button>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">$ 5200</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">2.88 ETH</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">7 Days</div>
+                                        <div className="hidden lg:flex w-1/5 text-sm font-bold text-[#377eff]">Gohard</div>
+                                        <div className="w-1/4 lg:w-1/5">
+                                            <button className="rounded-xl bg-[#377eff] p-[5px] text-xs text-white">BUY NOW</button>
                                         </div>
                                     </div>
                                 </div>
@@ -276,46 +277,46 @@ const Detailboard = () => {
                                 expandIcon={<ExpandMore />}
                             >
                                 <div className="flex flex-row gap-[1px] items-center">
-                                    <FormatListBulleted className="text-black" sx={{ fontSize: 30 }} />
-                                    <div className="text-lg font-bold text-black">Offers</div>
+                                    <FormatListBulleted className="text-gray-700" sx={{ fontSize: 20 }} />
+                                    <div className="text-lg font-bold text-gray-700">Offers</div>
                                 </div>
                             </AccordionSummary>
                             <AccordionDetails>
                                 <div className="flex flex-col gap-[20px]">
                                     <div className="flex flex-row items-center mx-[10px]">
-                                        <div className="w-1/5 text-sm font-bold text-black">Price</div>
-                                        <div className="w-1/5 text-sm font-bold text-black">Ethereum</div>
-                                        <div className="w-1/5 text-sm font-bold text-black">Floor Difference</div>
-                                        <div className="w-1/5 text-sm font-bold text-black">Expiration</div>
-                                        <div className="w-1/5 text-sm font-bold text-black">From</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm font-bold text-gray-700">Price</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm font-bold text-gray-700">Ethereum</div>
+                                        <div className="hidden lg:flex w-1/5 text-sm font-bold text-gray-700">Floor Difference</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm font-bold text-gray-700">Expiration</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm font-bold text-gray-700">From</div>
                                     </div>
                                     <div className="flex flex-row items-center mx-[10px]">
-                                        <div className="w-1/5 text-sm text-black">$ 5200</div>
-                                        <div className="w-1/5 text-sm text-black">2.88 ETH</div>
-                                        <div className="w-1/5 text-sm text-black">1.9 % bello</div>
-                                        <div className="w-1/5 text-sm text-black">about 4 hours</div>
-                                        <div className="w-1/5 text-sm font-bold text-[#dc2751]">SuperNova</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">$ 5200</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">2.88 ETH</div>
+                                        <div className="hidden lg:flex w-1/5 text-sm text-gray-700">1.9 % bello</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">about 4 hours</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm font-bold text-[#377eff]">SuperNova</div>
                                     </div>
                                     <div className="flex flex-row items-center mx-[10px]">
-                                        <div className="w-1/5 text-sm text-black">$ 5200</div>
-                                        <div className="w-1/5 text-sm text-black">2.78 ETH</div>
-                                        <div className="w-1/5 text-sm text-black">3.8 % bello</div>
-                                        <div className="w-1/5 text-sm text-black">about 8 hours</div>
-                                        <div className="w-1/5 text-sm font-bold text-[#dc2751]">MikelovesNFT</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">$ 5200</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">2.78 ETH</div>
+                                        <div className="hidden lg:flex w-1/5 text-sm text-gray-700">3.8 % bello</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">about 8 hours</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm font-bold text-[#377eff]">MikelovesNFT</div>
                                     </div>
                                     <div className="flex flex-row items-center mx-[10px]">
-                                        <div className="w-1/5 text-sm text-black">$ 5200</div>
-                                        <div className="w-1/5 text-sm text-black">2.72 ETH</div>
-                                        <div className="w-1/5 text-sm text-black">5.7 % bello</div>
-                                        <div className="w-1/5 text-sm text-black">about 9 hours</div>
-                                        <div className="w-1/5 text-sm font-bold text-[#dc2751]">June24x</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">$ 5200</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">2.72 ETH</div>
+                                        <div className="hidden lg:flex w-1/5 text-sm text-gray-700">5.7 % bello</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">about 9 hours</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm font-bold text-[#377eff]">June24x</div>
                                     </div>
                                     <div className="flex flex-row items-center mx-[10px]">
-                                        <div className="w-1/5 text-sm text-black">$ 5200</div>
-                                        <div className="w-1/5 text-sm text-black">2.55 ETH</div>
-                                        <div className="w-1/5 text-sm text-black">7.7 % bello</div>
-                                        <div className="w-1/5 text-sm text-black">about 10 hours</div>
-                                        <div className="w-1/5 text-sm font-bold text-[#dc2751]">KevinCranel</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">$ 5200</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">2.55 ETH</div>
+                                        <div className="hidden lg:flex w-1/5 text-sm text-gray-700">7.7 % bello</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm text-gray-700">about 10 hours</div>
+                                        <div className="w-1/4 lg:w-1/5 text-sm font-bold text-[#377eff]">KevinCranel</div>
                                     </div>
                                 </div>
                             </AccordionDetails>
@@ -327,32 +328,32 @@ const Detailboard = () => {
                                 expandIcon={<ExpandMore />}
                             >
                                 <div className="flex flex-row gap-[1px] items-center">
-                                    <LocalActivity className="text-black" sx={{ fontSize: 30 }} />
-                                    <div className="text-lg font-bold text-black">Activity</div>
+                                    <LocalActivity className="text-gray-700" sx={{ fontSize: 20 }} />
+                                    <div className="text-lg font-bold text-gray-700">Activity</div>
                                 </div>
                             </AccordionSummary>
                             <AccordionDetails>
                                 <div className="flex flex-col gap-[20px]">
                                     <div className="flex flex-row items-center mx-[10px]">
-                                        <div className="w-1/5 text-sm font-bold text-black">Event</div>
-                                        <div className="w-1/5 text-sm font-bold text-black">Price</div>
-                                        <div className="w-1/5 text-sm font-bold text-black">From</div>
-                                        <div className="w-1/5 text-sm font-bold text-black">To</div>
-                                        <div className="w-1/5 text-sm font-bold text-black">Date</div>
+                                        <div className="w-1/3 lg:w-1/5 text-sm font-bold text-gray-700">Event</div>
+                                        <div className="w-1/3 lg:w-1/5 text-sm font-bold text-gray-700">Price</div>
+                                        <div className="hidden lg:flex w-1/5 text-sm font-bold text-gray-700">From</div>
+                                        <div className="hidden lg:flex w-1/5 text-sm font-bold text-gray-700">To</div>
+                                        <div className="w-1/3 lg:w-1/5 text-sm font-bold text-gray-700">Date</div>
                                     </div>
                                     <div className="flex flex-row items-center mx-[10px]">
-                                        <div className="w-1/5 text-sm text-black">Sale</div>
-                                        <div className="w-1/5 text-sm text-black">$ 5,000</div>
-                                        <div className="w-1/5 text-sm text-black">MoneyMaster_</div>
-                                        <div className="w-1/5 text-sm text-black">Gohard</div>
-                                        <div className="w-1/5 text-sm font-bold text-[#dc2751]">2 days ago</div>
+                                        <div className="w-1/3 lg:w-1/5 text-sm text-gray-700">Sale</div>
+                                        <div className="w-1/3 lg:w-1/5 text-sm text-gray-700">$ 5,000</div>
+                                        <div className="hidden lg:flex w-1/5 text-sm text-gray-700">MoneyMaster_</div>
+                                        <div className="hidden lg:flex w-1/5 text-sm text-gray-700">Gohard</div>
+                                        <div className="w-1/3 lg:w-1/5 text-sm font-bold text-[#377eff]">2 days ago</div>
                                     </div>
                                     <div className="flex flex-row items-center mx-[10px]">
-                                        <div className="w-1/5 text-sm text-black">Mint</div>
-                                        <div className="w-1/5 text-sm text-black">$ 4,500 x 1,000</div>
-                                        <div className="w-1/5 text-sm text-black">NullAddress</div>
-                                        <div className="w-1/5 text-sm text-black">Multiple Accounts</div>
-                                        <div className="w-1/5 text-sm font-bold text-[#dc2751]">2 days ago</div>
+                                        <div className="w-1/3 lg:w-1/5 text-sm text-gray-700">Mint</div>
+                                        <div className="w-1/3 lg:w-1/5 text-sm text-gray-700">$ 4,500 x 1,000</div>
+                                        <div className="hidden lg:flex w-1/5 text-sm text-gray-700">NullAddress</div>
+                                        <div className="hidden lg:flex w-1/5 text-sm text-gray-700">Multiple Accounts</div>
+                                        <div className="w-1/3 lg:w-1/5 text-sm font-bold text-[#377eff]">2 days ago</div>
                                     </div>
                                 </div>
                             </AccordionDetails>
@@ -360,70 +361,70 @@ const Detailboard = () => {
                     </div>
                 </div>
                 <div className="flex flex-col gap-[20px] bg-gray-200 p-[20px]">
-                    <div className="text-4xl font-bold text-black text-center py-[50px]">How much can you earn with this Property?*</div>
-                    <div className="flex flex-row">
-                        <div className="w-2/3 flex flex-col gap-[20px] pr-[20px] border-r border-gray-300">
+                    <div className="text-4xl font-bold text-gray-700 text-center py-[50px]">How much can you earn with this Property?*</div>
+                    <div className="flex flex-col lg:flex-row gap-[20px] lg:gap-0">
+                        <div className="w-full lg:w-2/3 flex flex-col gap-[20px] pr-[20px] border-r-none lg:border-r border-gray-300">
                             <div className="flex flex-col gap-[10px]">
-                                <div className="flex flex-row gap-[20px]">
-                                    <div className="w-1/2 flex flex-col gap-[10px]">
-                                        <div className="text-basic text-black">Initial Amount</div>
-                                        <input placeholder="USD 20,000" type="number" className="p-[5px] bg-white rounded" />
+                                <div className="flex flex-col lg:flex-row gap-[20px]">
+                                    <div className="w-full lg:w-1/2 flex flex-col gap-[10px]">
+                                        <div className="text-basic text-gray-700">Initial Amount</div>
+                                        <input placeholder="USD 20,000" type="number" className="p-[5px] focus:outline-none bg-white rounded" />
                                     </div>
-                                    <div className="w-1/2 flex flex-col gap-[10px]">
-                                        <div className="text-basic text-black">Expected Annual Appreciaton</div>
-                                        <input placeholder="2 %" type="number" className="p-[5px] bg-white rounded" />
+                                    <div className="w-full lg:w-1/2 flex flex-col gap-[10px]">
+                                        <div className="text-basic text-gray-700">Expected Annual Appreciaton</div>
+                                        <input placeholder="2 %" type="number" className="p-[5px] focus:outline-none bg-white rounded" />
                                     </div>
                                 </div>
-                                <div className="flex flex-row gap-[20px]">
-                                    <div className="w-1/2 flex flex-col gap-[10px]">
-                                        <div className="text-basic text-black">Net Dividend Yield</div>
-                                        <input placeholder="7.79 %" type="number" className="p-[5px] bg-white rounded" />
+                                <div className="flex flex-col lg:flex-row gap-[20px]">
+                                    <div className="w-full lg:w-1/2 flex flex-col gap-[10px]">
+                                        <div className="text-basic text-gray-700">Net Dividend Yield</div>
+                                        <input placeholder="7.79 %" type="number" className="p-[5px] focus:outline-none bg-white rounded" />
                                     </div>
-                                    <div className="w-1/2 flex flex-col gap-[10px]">
-                                        <div className="text-basic text-black">Holding Period</div>
-                                        <input placeholder="5 Years" type="number" className="p-[5px] bg-white rounded" />
+                                    <div className="w-full lg:w-1/2 flex flex-col gap-[10px]">
+                                        <div className="text-basic text-gray-700">Holding Period</div>
+                                        <input placeholder="5 Years" type="number" className="p-[5px] focus:outline-none bg-white rounded" />
                                     </div>
                                 </div>
                             </div>
                             <Line options={profit_chart_options} data={profit_chart_data} />
                         </div>
-                        <div className="w-1/3 flex flex-col gap-[50px] ml-[20px]">
-                            <div className="flex flex-col gap-[20px]">
-                                <div className="text-lg text-black">Total Average Annualized Return</div>
-                                <div className="text-basic font-bold text-black">9.79%</div>
+                        <div className="w-full lg:w-1/3 flex flex-col gap-[20px] lg:gap-[50px] ml-[20px] pr-[40px] lg:pr-0">
+                            <div className="flex flex-col gap-[5px] lg:gap-[20px]">
+                                <div className="text-basic text-center lg:text-left text-gray-700">Total Average Annualized Return</div>
+                                <div className="text-basic text-center lg:text-left font-bold text-gray-700">9.79%</div>
                             </div>
-                            <div className="flex flex-col gap-[20px]">
-                                <div className="text-lg text-black">Total Rental Income</div>
-                                <div className="text-basic font-bold text-black">USD 7,790</div>
+                            <div className="flex flex-col gap-[5px] lg:gap-[20px]">
+                                <div className="text-basic text-center lg:text-left text-gray-700">Total Rental Income</div>
+                                <div className="text-basic text-center lg:text-left font-bold text-gray-700">USD 7,790</div>
                             </div>
-                            <div className="flex flex-col gap-[20px]">
-                                <div className="text-lg text-black">Expected Capital Appreciation</div>
-                                <div className="text-basic font-bold text-black">USD 2,000</div>
+                            <div className="flex flex-col gap-[5px] lg:gap-[20px]">
+                                <div className="text-basic text-center lg:text-left text-gray-700">Expected Capital Appreciation</div>
+                                <div className="text-basic text-center lg:text-left font-bold text-gray-700">USD 2,000</div>
                             </div>
-                            <div className="flex flex-col gap-[20px]">
-                                <div className="text-lg text-black">Total Return</div>
-                                <div className="text-basic font-bold text-black">USD 9,790</div>
+                            <div className="flex flex-col gap-[5px] lg:gap-[20px]">
+                                <div className="text-basic text-center lg:text-left text-gray-700">Total Return</div>
+                                <div className="text-basic text-center lg:text-left font-bold text-gray-700">USD 9,790</div>
                             </div>
-                            <div className="flex flex-col gap-[20px]">
-                                <div className="text-lg font-basic text-gray-500">Total Expected Value After 5 Years</div>
-                                <div className="text-4xl font-bold text-[#dc2751]">USD 29,790</div>
+                            <div className="flex flex-col gap-[5px] lg:gap-[20px]">
+                                <div className="text-basic text-center lg:text-left font-basic text-gray-500">Total Expected Value After 5 Years</div>
+                                <div className="text-2xl text-center lg:text-left font-bold text-[#377eff]">USD 29,790</div>
                             </div>
                         </div>
                     </div>
                     <div className="flex flex-row justify-center">
-                        <button className="rounded-xl bg-[#dc2751] p-[20px] text-xl text-white">BUY NOW</button>
+                        <button className="rounded-xl bg-[#377eff] px-[20px] py-[10px] text-lg text-white">BUY NOW</button>
                     </div>
                     <div className="text-sm text-gray-500 text-center mb-[20px]">This calculator is for illustrative purposes only. Buying a real-estate NFT carries risk and you may not receive the anticipated returns.</div>
                 </div>
-                <div className="flex flex-col gap-[20px] p-[50px]">
-                    <div className="text-4xl font-bold text-black text-center py-[20px]">Overview</div>
-                    <div className="flex flex-row gap-[50px]">
-                        <div className="w-1/2 flex flex-col gap-[30px]">
-                            <div className="text-lg font-bold text-black">About the Property</div>
-                            <div className="text-basic text-black">Here you will find all available information regarding the specific property. For example, this might entail where the property is located, what makes it unique, and why it could interest you. Furthermore, Metropoly provides insights about market conditions and why our team believes that the property value will increase in the long term. We evaluate crucial aspects of the property, including the area, surrounding development, service charges, building quality, number of amenities, developer, and expected supply.</div>
-                            <div className="text-basic text-black">All real estate offered on the Metropoly marketplace must pass a strict screening and selection process to provide users with the best opportunity to earn both rental yield and capital appreciation. In addition, we leverage data from leading third - party vendors to ensure that all of our internal research and analysis tools are accurate and reliable in current market conditions.</div>
+                <div className="flex flex-col gap-[20px] px-0 lg:px-[50px] py-[20px] lg:py-[50px]">
+                    <div className="text-4xl font-bold text-gray-700 text-center py-[20px]">Overview</div>
+                    <div className="flex flex-col lg:flex-row gap-[50px]">
+                        <div className="w-full lg:w-1/2 flex flex-col gap-[30px]">
+                            <div className="text-lg font-bold text-gray-700 text-center lg:text-left">About the Property</div>
+                            <div className="text-basic text-gray-700 text-center lg:text-left">Here you will find all available information regarding the specific property. For example, this might entail where the property is located, what makes it unique, and why it could interest you. Furthermore, Metropoly provides insights about market conditions and why our team believes that the property value will increase in the long term. We evaluate crucial aspects of the property, including the area, surrounding development, service charges, building quality, number of amenities, developer, and expected supply.</div>
+                            <div className="text-basic text-gray-700 text-center lg:text-left">All real estate offered on the Metropoly marketplace must pass a strict screening and selection process to provide users with the best opportunity to earn both rental yield and capital appreciation. In addition, we leverage data from leading third - party vendors to ensure that all of our internal research and analysis tools are accurate and reliable in current market conditions.</div>
                         </div>
-                        <div className="w-1/2 flex flex-col gap-[20px]">
+                        <div className="w-1/2 hidden lg:flex flex-col gap-[20px]">
                             <div className="flex flex-row">
                                 <div className="w-1/5 flex flex-col items-center justify">
                                     <ChildCare className="text-white bg-gray-500 rounded-full p-[15px]" sx={{ fontSize: 60 }} />
@@ -487,132 +488,132 @@ const Detailboard = () => {
                                 </div>
                                 <div className="w-1/5 flex flex-col items-center">
                                     <MeetingRoom className="text-white bg-gray-500 rounded-full p-[15px]" sx={{ fontSize: 60 }} />
-                                    <div className="w-2/3 text-sm text-gray-500 text-center">Interconnected Rooms</div>
+                                    <div className="w-2/3 text-sm text-gray-500 text-center">Rooms</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className="flex flex-col gap-[20px] p-[20px]">
-                    <div className="text-4xl font-bold text-black text-center py-[30px]">Financial Details</div>
-                    <div className="flex flex-row gap-[20px]">
-                        <div className="w-1/2">
+                    <div className="text-4xl font-bold text-gray-700 text-center py-[30px]">Financial Details</div>
+                    <div className="flex flex-col lg:flex-row gap-[20px]">
+                        <div className="w-full lg:w-1/2">
                             <Accordion className="!shadow-none !rounded-2xl border border-gray-200">
                                 <AccordionSummary
                                     expandIcon={<ExpandMore />}
                                 >
                                     <div className="flex flex-row gap-[10px] items-center">
-                                        <Details className="text-black" sx={{ fontSize: 40 }} />
+                                        <Details className="text-gray-700" sx={{ fontSize: 40 }} />
                                         <div className="flex flex-col gap-[5px]">
-                                            <div className="text-lg text-[#dc2751]">Transaction</div>
-                                            <div className="text-xl font-bold text-black">Details</div>
+                                            <div className="text-basic text-[#377eff]">Transaction</div>
+                                            <div className="text-lg text-gray-700">Details</div>
                                         </div>
                                     </div>
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <div className="flex flex-col gap-[20px]">
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Property Listing Price :</div>
-                                            <div className="text-lg text-black">USD 4,1000,000</div>
+                                            <div className="text-sm text-gray-700">Property Listing Price :</div>
+                                            <div className="text-sm text-gray-700">USD 4,1000,000</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg font-bold text-black">Transaction Costs</div>
-                                            <div className="text-lg font-bold text-black">USD 400,000</div>
+                                            <div className="text-sm font-bold text-gray-700">Transaction Costs</div>
+                                            <div className="text-sm font-bold text-gray-700">USD 400,000</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Title Search & Insurance (0.5% - 1%)</div>
-                                            <div className="text-lg text-black">USD 40,000</div>
+                                            <div className="text-sm text-gray-700">Title Search & Insurance (0.5% - 1%)</div>
+                                            <div className="text-sm text-gray-700">USD 40,000</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Recording Fees (0.2% - 0.5%)</div>
-                                            <div className="text-lg text-black">USD 20,000</div>
+                                            <div className="text-sm text-gray-700">Recording Fees (0.2% - 0.5%)</div>
+                                            <div className="text-sm text-gray-700">USD 20,000</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Legal Fees (0.5% - 1%)</div>
-                                            <div className="text-lg text-black">USD 40,000</div>
+                                            <div className="text-sm text-gray-700">Legal Fees (0.5% - 1%)</div>
+                                            <div className="text-sm text-gray-700">USD 40,000</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Taxes (1%)</div>
-                                            <div className="text-lg text-black">USD 40,000</div>
+                                            <div className="text-sm text-gray-700">Taxes (1%)</div>
+                                            <div className="text-sm text-gray-700">USD 40,000</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Broker Fee (3%)</div>
-                                            <div className="text-lg text-black">USD 120,000</div>
+                                            <div className="text-sm text-gray-700">Broker Fee (3%)</div>
+                                            <div className="text-sm text-gray-700">USD 120,000</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Renovation Costs (2%)</div>
-                                            <div className="text-lg text-black">USD 80,000</div>
+                                            <div className="text-sm text-gray-700">Renovation Costs (2%)</div>
+                                            <div className="text-sm text-gray-700">USD 80,000</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Metropoly fee (1.5%)</div>
-                                            <div className="text-lg text-black">USD 60,000</div>
+                                            <div className="text-sm text-gray-700">Metropoly fee (1.5%)</div>
+                                            <div className="text-sm text-gray-700">USD 60,000</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg font-bold text-[#dc2751]">Total Acquisition Cost :</div>
-                                            <div className="text-lg font-bold text-[#dc2751]">USD 4,500,000</div>
+                                            <div className="text-sm font-bold text-[#377eff]">Total Acquisition Cost :</div>
+                                            <div className="text-sm font-bold text-[#377eff]">USD 4,500,000</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Total Number of NFTs :</div>
-                                            <div className="text-lg text-black">1,000</div>
+                                            <div className="text-sm text-gray-700">Total Number of NFTs :</div>
+                                            <div className="text-sm text-gray-700">1,000</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Value of One NFT :</div>
-                                            <div className="text-lg text-black">1 / 1000</div>
+                                            <div className="text-sm text-gray-700">Value of One NFT :</div>
+                                            <div className="text-sm text-gray-700">1 / 1000</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg font-bold text-[#dc2751]">Mint Price Per NFT :</div>
-                                            <div className="text-lg font-bold text-[#dc2751]">USD 4,500</div>
+                                            <div className="text-sm font-bold text-[#377eff]">Mint Price Per NFT :</div>
+                                            <div className="text-sm font-bold text-[#377eff]">USD 4,500</div>
                                         </div>
                                     </div>
                                 </AccordionDetails>
                             </Accordion>
                         </div>
-                        <div className="w-1/2">
+                        <div className="w-full lg:w-1/2">
                             <Accordion className="!shadow-none !rounded-2xl border border-gray-200">
                                 <AccordionSummary
                                     expandIcon={<ExpandMore />}
                                 >
                                     <div className="flex flex-row gap-[10px] items-center">
-                                        <Wysiwyg className="text-black" sx={{ fontSize: 40 }} />
+                                        <Wysiwyg className="text-gray-700" sx={{ fontSize: 40 }} />
                                         <div className="flex flex-col gap-[5px]">
-                                            <div className="text-lg text-[#dc2751]">Rental</div>
-                                            <div className="text-xl font-bold text-black">Breakdown</div>
+                                            <div className="text-basic text-[#377eff]">Rental</div>
+                                            <div className="text-lg text-gray-700">Breakdown</div>
                                         </div>
                                     </div>
                                 </AccordionSummary>
                                 <AccordionDetails>
                                     <div className="flex flex-col gap-[20px]">
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Gross Yield</div>
-                                            <div className="text-lg text-black">12.79%</div>
+                                            <div className="text-sm text-gray-700">Gross Yield</div>
+                                            <div className="text-sm text-gray-700">12.79%</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg font-bold text-black">Gross Rent Per Year</div>
-                                            <div className="text-lg font-bold text-black">USD 655,808</div>
+                                            <div className="text-sm font-bold text-gray-700">Gross Rent Per Year</div>
+                                            <div className="text-sm font-bold text-gray-700">USD 655,808</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Service Charges (10%)</div>
-                                            <div className="text-lg text-black">USD 65,508</div>
+                                            <div className="text-sm text-gray-700">Service Charges (10%)</div>
+                                            <div className="text-sm text-gray-700">USD 65,508</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Property Management (15%)</div>
-                                            <div className="text-lg text-black">USD 98,262</div>
+                                            <div className="text-sm text-gray-700">Property Management (15%)</div>
+                                            <div className="text-sm text-gray-700">USD 98,262</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Property Insurance</div>
-                                            <div className="text-lg text-black">USD 20,722</div>
+                                            <div className="text-sm text-gray-700">Property Insurance</div>
+                                            <div className="text-sm text-gray-700">USD 20,722</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Maintenance Charges (10%)</div>
-                                            <div className="text-lg text-black">USD 65,506</div>
+                                            <div className="text-sm text-gray-700">Maintenance Charges (10%)</div>
+                                            <div className="text-sm text-gray-700">USD 65,506</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg text-black">Net Dividend Yield</div>
-                                            <div className="text-lg text-black">7.79%</div>
+                                            <div className="text-sm text-gray-700">Net Dividend Yield</div>
+                                            <div className="text-sm text-gray-700">7.79%</div>
                                         </div>
                                         <div className="flex flex-row justify-between">
-                                            <div className="text-lg font-bold text-[#dc2751]">Annual Rental income</div>
-                                            <div className="text-lg font-bold text-[#dc2751]">USD 405,080</div>
+                                            <div className="text-sm font-bold text-[#377eff]">Annual Rental income</div>
+                                            <div className="text-sm font-bold text-[#377eff]">USD 405,080</div>
                                         </div>
                                     </div>
                                 </AccordionDetails>
@@ -620,26 +621,26 @@ const Detailboard = () => {
                         </div>
                     </div>
                     <div className="flex flex-row justify-center pb-[30px]">
-                        <div className="w-2/3 text-lg text-gray-500 text-center">This financial breakdown is entirely fictitious and serves only as an illustration. Prices and costs may vary and depend on the city, the country, the applicable laws, and other factors.</div>
+                        <div className="w-full lg:w-2/3 text-basic text-gray-500 text-center">This financial breakdown is entirely fictitious and serves only as an illustration. Prices and costs may vary and depend on the city, the country, the applicable laws, and other factors.</div>
                     </div>
                 </div>
-                <div className="flex flex-row gap-[20px] bg-gray-200 py-[50px]">
-                    <div className="w-1/2 flex flex-col gap-[30px]">
-                        <div className="text-4xl font-bold text-black text-center py-[20px]">Property Info</div>
+                <div className="flex flex-col lg:flex-row gap-[20px] bg-gray-200 py-[50px]">
+                    <div className="w-full lg:w-1/2 flex flex-col gap-[30px]">
+                        <div className="text-4xl font-bold text-gray-700 text-center py-[20px]">Property Info</div>
                         <div className="flex flex-col gap-[30px]">
                             <div className="flex flex-row">
                                 <div className="w-1/2 flex flex-col gap-[20px] items-center">
                                     <Toll className="text-white bg-gray-500 rounded-full p-[15px]" sx={{ fontSize: 60 }} />
                                     <div className="w-2/3 flex flex-col">
                                         <div className="text-basic text-gray-500 text-center">Minimum. amount</div>
-                                        <div className="text-lg text-black font-bold text-center">$ 5,200</div>
+                                        <div className="text-lg text-gray-700 font-bold text-center">$ 5,200</div>
                                     </div>
                                 </div>
                                 <div className="w-1/2 flex flex-col gap-[20px] items-center">
                                     <Groups className="text-white bg-gray-500 rounded-full p-[15px]" sx={{ fontSize: 60 }} />
                                     <div className="w-2/3 flex flex-col">
                                         <div className="text-basic text-gray-500 text-center">Number of NFT holders</div>
-                                        <div className="text-lg text-black font-bold text-center">800</div>
+                                        <div className="text-lg text-gray-700 font-bold text-center">800</div>
                                     </div>
                                 </div>
                             </div>
@@ -648,106 +649,106 @@ const Detailboard = () => {
                                     <Home className="text-white bg-gray-500 rounded-full p-[15px]" sx={{ fontSize: 60 }} />
                                     <div className="w-2/3 flex flex-col">
                                         <div className="text-basic text-gray-500 text-center">Suggested holding period</div>
-                                        <div className="text-lg text-black font-bold text-center">5 Years</div>
+                                        <div className="text-lg text-gray-700 font-bold text-center">5 Years</div>
                                     </div>
                                 </div>
                                 <div className="w-1/2 flex flex-col gap-[20px] items-center">
                                     <Money className="text-white bg-gray-500 rounded-full p-[15px]" sx={{ fontSize: 60 }} />
                                     <div className="w-2/3 flex flex-col">
                                         <div className="text-basic text-gray-500 text-center">Annual Rent</div>
-                                        <div className="text-lg text-black font-bold text-center">$ 405,080</div>
+                                        <div className="text-lg text-gray-700 font-bold text-center">$ 405,080</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className="w-1/2 flex flex-col gap-[30px]">
-                        <div className="text-4xl font-bold text-black text-center py-[20px]">Rental Yields</div>
+                    <div className="w-full lg:w-1/2 flex flex-col gap-[30px]">
+                        <div className="text-4xl font-bold text-gray-700 text-center py-[20px]">Rental Yields</div>
                         <div className="flex flex-col gap-[30px]">
                             <div className="flex flex-row">
                                 <div className="w-1/2 flex flex-col gap-[20px] items-center">
-                                    <AutoGraph className="text-white bg-[#dc2751] rounded-full p-[15px]" sx={{ fontSize: 60 }} />
+                                    <AutoGraph className="text-white bg-[#377eff] rounded-full p-[15px]" sx={{ fontSize: 60 }} />
                                     <div className="w-2/3 flex flex-col">
                                         <div className="text-basic text-gray-500 text-center">Expected Dividend Yield</div>
-                                        <div className="text-lg text-black font-bold text-center">7.79 %</div>
+                                        <div className="text-lg text-gray-700 font-bold text-center">7.79 %</div>
                                     </div>
                                 </div>
                                 <div className="w-1/2 flex flex-col gap-[20px] items-center">
-                                    <BarChart className="text-white bg-[#dc2751] rounded-full p-[15px]" sx={{ fontSize: 60 }} />
+                                    <BarChart className="text-white bg-[#377eff] rounded-full p-[15px]" sx={{ fontSize: 60 }} />
                                     <div className="w-2/3 flex flex-col">
                                         <div className="text-basic text-gray-500 text-center">Gross yield</div>
-                                        <div className="text-lg text-black font-bold text-center">12.79 %</div>
+                                        <div className="text-lg text-gray-700 font-bold text-center">12.79 %</div>
                                     </div>
                                 </div>
                             </div>
                             <div className="flex flex-row">
                                 <div className="w-1/2 flex flex-col gap-[20px] items-center">
-                                    <Money className="text-white bg-[#dc2751] rounded-full p-[15px]" sx={{ fontSize: 60 }} />
+                                    <Money className="text-white bg-[#377eff] rounded-full p-[15px]" sx={{ fontSize: 60 }} />
                                     <div className="w-2/3 flex flex-col">
                                         <div className="text-basic text-gray-500 text-center">5 YR Expected Return</div>
-                                        <div className="text-lg text-black font-bold text-center">48.95 %</div>
+                                        <div className="text-lg text-gray-700 font-bold text-center">48.95 %</div>
                                     </div>
                                 </div>
                                 <div className="w-1/2 flex flex-col gap-[20px] items-center">
-                                    <Insights className="text-white bg-[#dc2751] rounded-full p-[15px]" sx={{ fontSize: 60 }} />
+                                    <Insights className="text-white bg-[#377eff] rounded-full p-[15px]" sx={{ fontSize: 60 }} />
                                     <div className="w-2/3 flex flex-col">
                                         <div className="text-basic text-gray-500 text-center">Devidend Frequency</div>
-                                        <div className="text-lg text-black font-bold text-center">Monthly</div>
+                                        <div className="text-lg text-gray-700 font-bold text-center">Monthly</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col gap-[20px] bg-[#dc2751] py-[50px]">
+                <div className="flex flex-col gap-[20px] bg-[#377eff] py-[50px] px-0 lg:px-[10px]">
                     <div className="text-4xl font-bold text-white text-center pt-[30px]">Documents</div>
                     <div className="text-xl text-white text-center pt-[10px] pb-[30px]">Confidential property documents</div>
-                    <div className="flex flex-row gap-[20px] justify-center">
-                        <div className="flex flex-row gap-[10px] items-center p-[20px] bg-white rounded-2xl">
+                    <div className="flex flex-col lg:flex-row gap-[20px] justify-center mx-[10px] lg:mx-0">
+                        <div className="flex flex-row gap-[10px] items-center p-[20px] bg-white rounded-2xl hover:cursor-pointer">
                             <div className="flex flex-col gap-[5px]">
-                                <div className="text-lg font-bold text-black">Download</div>
-                                <div className="text-basic text-[#dc2751]">Independent Property Report</div>
+                                <div className="text-basic font-bold text-gray-700">Download</div>
+                                <div className="text-sm text-[#377eff]">Independent Property Report</div>
                             </div>
                             <Download className="text-gray-500" sx={{ fontSize: 30 }} />
                         </div>
-                        <div className="flex flex-row gap-[10px] items-center p-[20px] bg-white rounded-2xl">
+                        <div className="flex flex-row gap-[10px] items-center p-[20px] bg-white rounded-2xl hover:cursor-pointer">
                             <div className="flex flex-col gap-[5px]">
-                                <div className="text-lg font-bold text-black">Download</div>
-                                <div className="text-basic text-[#dc2751]">Independent Area Report</div>
+                                <div className="text-basic font-bold text-gray-700">Download</div>
+                                <div className="text-sm text-[#377eff]">Independent Area Report</div>
                             </div>
                             <Download className="text-gray-500" sx={{ fontSize: 30 }} />
                         </div>
-                        <div className="flex flex-row gap-[10px] items-center p-[20px] bg-white rounded-2xl">
+                        <div className="flex flex-row gap-[10px] items-center p-[20px] bg-white rounded-2xl hover:cursor-pointer">
                             <div className="flex flex-col gap-[5px]">
-                                <div className="text-lg font-bold text-black">Download</div>
-                                <div className="text-basic text-[#dc2751]">Memorandum & Disclaimer</div>
+                                <div className="text-basic font-bold text-gray-700">Download</div>
+                                <div className="text-sm text-[#377eff]">Memorandum & Disclaimer</div>
                             </div>
                             <Download className="text-gray-500" sx={{ fontSize: 30 }} />
                         </div>
-                        <div className="flex flex-row gap-[10px] items-center p-[20px] bg-white rounded-2xl">
+                        <div className="flex flex-row gap-[10px] items-center p-[20px] bg-white rounded-2xl hover:cursor-pointer">
                             <div className="flex flex-col gap-[5px]">
-                                <div className="text-lg font-bold text-black">Download</div>
-                                <div className="text-basic text-[#dc2751]">Projections Report</div>
+                                <div className="text-basic font-bold text-gray-700">Download</div>
+                                <div className="text-sm text-[#377eff]">Projections Report</div>
                             </div>
                             <Download className="text-gray-500" sx={{ fontSize: 30 }} />
                         </div>
                     </div>
                 </div>
-                <div className="flex flex-col p-[70px]">
-                    <div className="text-4xl font-bold text-black text-center py-[20px]">Location</div>
-                    <img src={map_1} alt=""></img>
+                <div className="flex flex-col px-0 lg:px-[70px] py-[20px] lg:py-[70px]">
+                    <div className="text-4xl font-bold text-gray-700 text-center py-[20px]">Location</div>
+                    <img className="w-full object-cover" src={map_1} alt=""></img>
                 </div>
-                <div className="flex flex-col gap-[20px] bg-gray-200 p-[30px]">
-                    <div className="text-4xl font-bold text-black text-center py-[30px]">Developer & Property Manager</div>
-                    <div className="flex flex-row gap-[50px]">
-                        <div className="w-1/2 flex flex-col gap-[20px]">
-                            <div className="text-2xl text-black text-center">Titan</div>
-                            <div className="text-lg font-bold text-black text-center">Developer: Titan Real Estate Corp</div>
+                <div className="flex flex-col gap-[20px] bg-gray-200 px-[10px] lg:px-[30px] pt-[20px] lg:pt-[50px] pb-[40px] lg:pb-[80px]">
+                    <div className="text-4xl font-bold text-gray-700 text-center py-[20px] lg:py-[30px]">Developer & Property Manager</div>
+                    <div className="flex flex-col lg:flex-row gap-[20px] lg:gap-[50px]">
+                        <div className="w-full lg:w-1/2 flex flex-col gap-[10px] lg:gap-[20px]">
+                            <div className="text-2xl text-gray-700 text-center">Titan</div>
+                            <div className="text-lg font-bold text-gray-700 text-center">Developer: Titan Real Estate Corp</div>
                             <div className="text-lg text-gray-500 text-center">This company is fictitious and for illustrative purposes only. Titan is a multinational real estate development company based in London, UK. The company operates internationally and provides real estate development and management services.</div>
                         </div>
-                        <div className="w-1/2 flex flex-col gap-[20px]">
-                            <div className="text-2xl text-black text-center">Bed & Chill</div>
-                            <div className="text-lg font-bold text-black text-center">Property Manager: Ben & Chill</div>
+                        <div className="w-full lg:w-1/2 flex flex-col gap-[10px] lg:gap-[20px]">
+                            <div className="text-2xl text-gray-700 text-center">Bed & Chill</div>
+                            <div className="text-lg font-bold text-gray-700 text-center">Property Manager: Ben & Chill</div>
                             <div className="text-lg text-gray-500 text-center">This company is fictitious and for illustrative purposes only. Founded in 2012, Bed & Chill specializes in full-service property management services. The company’s mission is to help landlords save time and turn their house or apartment into a profitable revenue stream.</div>
                         </div>
                     </div>

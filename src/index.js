@@ -2,6 +2,8 @@ import ReactDOM from "react-dom/client";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./pages/Layout";
 import Dashboard from "./pages/Dashboard";
+import Marketplace from "./pages/Marketplace";
+import Launchpad from "./pages/Launchpad";
 import Detailboard from "./pages/Detailboard";
 import Profileboard from "./pages/Profileboard";
 import NoPage from "./pages/NoPage";
@@ -16,6 +18,8 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Dashboard />} />
+          <Route path="/marketplace" element={<Marketplace />} />
+          <Route path="/launchpad" element={<Launchpad />} />
           <Route path="/detail" element={<Detailboard />} />
           <Route path="/profile" element={<Profileboard />} />
           <Route path="*" element={<NoPage />} />

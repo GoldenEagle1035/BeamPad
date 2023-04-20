@@ -7,10 +7,10 @@ import {
     Edit
 } from '@mui/icons-material';
 import LinearProgress from '@mui/material/LinearProgress';
-import house_4 from '../assets/images/house-4.png';
+import house_2 from '../assets/images/house-2.png';
 import tether from '../assets/images/tether.png';
 
-const PropertyItem = () => {
+const MarketplacePropertyItem = () => {
 
     const navigate = useNavigate();
 
@@ -23,7 +23,7 @@ const PropertyItem = () => {
             onClick={(e) => { navigate("/detail") }}
         >
             <div className="relative w-full h-[200px] hover:cursor-pointer">
-                <img className="w-full h-full object-cover" src={house_4} alt="" />
+                <img className="w-full h-full object-cover" src={house_2} alt="" />
                 <div className="absolute top-5 left-5 p-[2px] rounded-xl border border-white bg-transparent">
                     <div className="px-[10px] py-[5px] rounded-lg bg-white text-xs text-[#377eff]">
                         74 DAYS LEFT
@@ -55,7 +55,7 @@ const PropertyItem = () => {
                     <img className="w-[15px] h-[15px] object-cover" src={tether} alt="" />
                     <div className="text-gray-700 text-sm">/ REATS</div>
                 </div>
-                <div className="flex flex-row bg-gray-100 items-center border-gray-300 py-[10px]">
+                <div className="flex flex-row bg-gray-100 items-center py-[10px]">
                     <div className="w-1/3 flex flex-col gap-[5px] items-center border-r border-gray-300">
                         <div className="text-xs text-gray-400">Returns</div>
                         <div className="text-xs text-gray-700">30%</div>
@@ -77,4 +77,4 @@ const PropertyItem = () => {
     );
 };
 
-export default PropertyItem;
+export default MarketplacePropertyItem;

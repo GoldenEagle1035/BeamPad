@@ -1,90 +1,109 @@
 
 import { useNavigate } from 'react-router-dom';
 
-import { 
-    AccountCircle, 
-    Home, 
-    ViewSidebar, 
-    AllInbox, 
-    Settings, 
-    LocalGroceryStore,
-    Upcoming,
-    Gavel,
-    SupervisorAccount,
-    Favorite,
-    Wallet,
+import {
+    Home,
+    Flag,
+    RocketLaunch,
+    AccountBox,
+    Group,
+    Payments,
     Domain,
-    Payments
+    Menu
 } from '@mui/icons-material';
+import { Drawer } from '@mui/material';
+import { useState } from 'react';
 
 const LeftMenu = () => {
 
     const navigate = useNavigate();
 
+    const [open, setOpen] = useState(false);
+
     return (
-        <div className="w-[200px] flex flex-col gap-[20px] p-[5px] bg-gray-100">
-            <div className='flex flex-row gap-[5px] mt-[10px] items-center hover:cursor-pointer' onClick={(e)=> {navigate("profile")}}>
-                <AccountCircle sx={{ color: '#dc2751', fontSize: 50 }} />
-                <div className='flex flex-col'>
-                    <div className="text-sm font-bold text-black">Demo Account</div>
-                    <div className="text-sm text-gray-500">Level: Broker</div>
-                    <div className='flex flex-row gap-[1px]'>
-                        <Home className='text-[#dc2751]' sx={{ fontSize: 15 }} />
-                        <Home className='text-[#dc2751]' sx={{ fontSize: 15 }} />
+        <div className="relative flex flex-col border-r-none lg:border-r-2 border-gray-300">
+            <div className='absolute -mt-[40px] ml-[15px] lg:hidden flex hover:cursor-pointer' onClick={(e) => { setOpen(!open) }}>
+                <Menu className='text-gray-400 hover:bg-[#ebf4f3]' />
+            </div>
+            <div className='lg:hidden flex'>
+                <Drawer
+                    anchor="left"
+                    open={open}
+                    onClose={() => { if (open) setOpen(false) }}
+                >
+                    <div className='px-[25px] py-[20px] group hover:bg-[#ebf4f3] border-s-2 border-white hover:border-[#377eff] hover:cursor-pointer'
+                        onClick={(e) => { navigate("/") }}
+                    >
+                        <Home className='text-gray-400 group-hover:text-[#377eff]' sx={{ fontSize: 30 }} />
                     </div>
-                </div>
+                    <div className='px-[25px] py-[20px] group hover:bg-[#ebf4f3] border-s-2 border-white hover:border-s-[#377eff] hover:cursor-pointer'
+                        onClick={(e) => { navigate("/marketplace") }}
+                    >
+                        <Flag className='text-gray-400 group-hover:text-[#377eff]' sx={{ fontSize: 30 }} />
+                    </div>
+                    <div className='px-[25px] py-[20px] group hover:bg-[#ebf4f3] border-s-2 border-white hover:border-[#377eff] hover:cursor-pointer'
+                        onClick={(e) => { navigate("/launchpad") }}
+                    >
+                        <RocketLaunch className='text-gray-400 group-hover:text-[#377eff]' sx={{ fontSize: 30 }} />
+                    </div>
+                    <div className='px-[25px] py-[20px] group hover:bg-[#ebf4f3] border-s-2 border-white hover:border-[#377eff] hover:cursor-pointer'
+                        onClick={(e) => { navigate("/profile") }}
+                    >
+                        <AccountBox className='text-gray-400 group-hover:text-[#377eff]' sx={{ fontSize: 30 }} />
+                    </div>
+                    <div className='px-[25px] py-[20px] group hover:bg-[#ebf4f3] border-s-2 border-white hover:border-[#377eff] hover:cursor-pointer'>
+                        <Group className='text-gray-400 group-hover:text-[#377eff]' sx={{ fontSize: 30 }} />
+                    </div>
+                    <div className='px-[25px] py-[20px] group hover:bg-[#ebf4f3] border-s-2 border-white hover:border-[#377eff] hover:cursor-pointer'>
+                        <Payments className='text-gray-400 group-hover:text-[#377eff]' sx={{ fontSize: 30 }} />
+                    </div>
+                    <div className='px-[25px] py-[20px] group hover:bg-[#ebf4f3] border-s-2 border-white hover:border-[#377eff] hover:cursor-pointer'>
+                        <Domain className='text-gray-400 group-hover:text-[#377eff]' sx={{ fontSize: 30 }} />
+                    </div>
+                </Drawer>
             </div>
-            <div className='flex flex-col'>
-                <div className="p-[10px] text-xs font-bold text-black">General</div>
-                <div className='p-[10px] group hover:cursor-pointer hover:bg-[#dc275130] rounded flex flex-row gap-[5px] items-center text-gray-400'>
-                    <ViewSidebar className="group-hover:text-[#dc2751] text-gray-700" sx={{ fontSize: 25 }} />
-                    <div className="group-hover:text-[#dc2751] text-sm">Dashboard</div>
+            <div className='lg:flex flex-col hidden'>
+                <div className='px-[25px] py-[20px] group hover:bg-[#ebf4f3] border-r-2 border-white hover:border-[#377eff] hover:cursor-pointer'
+                    onClick={(e) => { navigate("/") }}
+                    title="Dashboard"
+                >
+                    <Home className='text-gray-400 group-hover:text-[#377eff]' sx={{ fontSize: 30 }} />
                 </div>
-                <div className='p-[10px] group hover:cursor-pointer hover:bg-[#dc275130] rounded flex flex-row gap-[5px] items-center text-gray-400'>
-                    <AllInbox className="group-hover:text-[#dc2751] text-gray-700" sx={{ fontSize: 25 }} />
-                    <div className="group-hover:text-[#dc2751] text-sm">Inbox</div>
+                <div className='px-[25px] py-[20px] group hover:bg-[#ebf4f3] border-r-2 border-white hover:border-[#377eff] hover:cursor-pointer'
+                    onClick={(e) => { navigate("/marketplace") }}
+                    title="Marketplace"
+                >
+                    <Flag className='text-gray-400 group-hover:text-[#377eff]' sx={{ fontSize: 30 }} />
                 </div>
-                <div className='p-[10px] group hover:cursor-pointer hover:bg-[#dc275130] rounded flex flex-row gap-[5px] items-center text-gray-400'>
-                    <Settings className="group-hover:text-[#dc2751] text-gray-700" sx={{ fontSize: 25 }} />
-                    <div className="group-hover:text-[#dc2751] text-sm">Settings</div>
+                <div className='px-[25px] py-[20px] group hover:bg-[#ebf4f3] border-r-2 border-white hover:border-[#377eff] hover:cursor-pointer'
+                    onClick={(e) => { navigate("/launchpad") }}
+                    title="Upcoming"
+                >
+                    <RocketLaunch className='text-gray-400 group-hover:text-[#377eff]' sx={{ fontSize: 30 }} />
                 </div>
-            </div>
-            <div className='flex flex-col'>
-                <div className="p-[10px] text-xs font-bold text-black">Market</div>
-                <div className='p-[10px] group hover:cursor-pointer hover:bg-[#dc275130] rounded flex flex-row gap-[5px] items-center text-gray-400'>
-                    <LocalGroceryStore className="group-hover:text-[#dc2751] text-gray-700" sx={{ fontSize: 25 }} />
-                    <div className="group-hover:text-[#dc2751] text-sm">Marketplace</div>
+                <div className='px-[25px] py-[20px] group hover:bg-[#ebf4f3] border-r-2 border-white hover:border-[#377eff] hover:cursor-pointer'
+                    onClick={(e) => { navigate("/profile") }}
+                    title="Profile"
+                >
+                    <AccountBox className='text-gray-400 group-hover:text-[#377eff]' sx={{ fontSize: 30 }} />
                 </div>
-                <div className='p-[10px] group hover:cursor-pointer hover:bg-[#dc275130] rounded flex flex-row gap-[5px] items-center text-gray-400'>
-                    <Upcoming className="group-hover:text-[#dc2751] text-gray-700" sx={{ fontSize: 25 }} />
-                    <div className="group-hover:text-[#dc2751] text-sm">Upcoming</div>
+                <div className='px-[25px] py-[20px] group hover:bg-[#ebf4f3] border-r-2 border-white hover:border-[#377eff] hover:cursor-pointer'
+                    onClick={(e) => { }}
+                    title="Group"
+                >
+                    <Group className='text-gray-400 group-hover:text-[#377eff]' sx={{ fontSize: 30 }} />
                 </div>
-                <div className='p-[10px] group hover:cursor-pointer hover:bg-[#dc275130] rounded flex flex-row gap-[5px] items-center text-gray-400'>
-                    <Gavel className="group-hover:text-[#dc2751] text-gray-700" sx={{ fontSize: 25 }} />
-                    <div className="group-hover:text-[#dc2751] text-sm">Auction</div>
+                <div className='px-[25px] py-[20px] group hover:bg-[#ebf4f3] border-r-2 border-white hover:border-[#377eff] hover:cursor-pointer'
+                    onClick={(e) => { }}
+                    title="Payment"
+                >
+                    <Payments className='text-gray-400 group-hover:text-[#377eff]' sx={{ fontSize: 30 }} />
                 </div>
-                <div className='p-[10px] group hover:cursor-pointer hover:bg-[#dc275130] rounded flex flex-row gap-[5px] items-center text-gray-400'>
-                    <SupervisorAccount className="group-hover:text-[#dc2751] text-gray-700" sx={{ fontSize: 25 }} />
-                    <div className="group-hover:text-[#dc2751] text-sm">Mortgages</div>
-                </div>
-                <div className='p-[10px] group hover:cursor-pointer hover:bg-[#dc275130] rounded flex flex-row gap-[5px] items-center text-gray-400'>
-                    <Favorite className="group-hover:text-[#dc2751] text-gray-700" sx={{ fontSize: 25 }} />
-                    <div className="group-hover:text-[#dc2751] text-sm">Favorites</div>
-                </div>
-            </div>
-            <div className='flex flex-col'>
-                <div className="p-[10px] text-xs font-bold text-black">My Profile</div>
-                <div className='p-[10px] group hover:cursor-pointer hover:bg-[#dc275130] rounded flex flex-row gap-[5px] items-center text-gray-400'>
-                    <Wallet className="group-hover:text-[#dc2751] text-gray-700" sx={{ fontSize: 25 }} />
-                    <div className="group-hover:text-[#dc2751] text-sm">Overview</div>
-                </div>
-                <div className='p-[10px] group hover:cursor-pointer hover:bg-[#dc275130] rounded flex flex-row gap-[5px] items-center text-gray-400'>
-                    <Domain className="group-hover:text-[#dc2751] text-gray-700" sx={{ fontSize: 25 }} />
-                    <div className="group-hover:text-[#dc2751] text-sm">My Properties</div>
-                </div>
-                <div className='p-[10px] group hover:cursor-pointer hover:bg-[#dc275130] rounded flex flex-row gap-[5px] items-center text-gray-400'>
-                    <Payments className="group-hover:text-[#dc2751] text-gray-700" sx={{ fontSize: 25 }} />
-                    <div className="group-hover:text-[#dc2751] text-sm">Payouts</div>
+                <div className='px-[25px] py-[20px] group hover:bg-[#ebf4f3] border-r-2 border-white hover:border-[#377eff] hover:cursor-pointer'
+                    onClick={(e) => { }}
+                    title="Property"
+                >
+                    <Domain className='text-gray-400 group-hover:text-[#377eff]' sx={{ fontSize: 30 }} />
                 </div>
             </div>
         </div>

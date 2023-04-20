@@ -7,7 +7,6 @@ module.exports = {
     output: {
         filename: "main.js",
         path: path.resolve(__dirname, "build"),
-        publicPath: '/',
     },
     plugins: [
         new HtmlWebpackPlugin({
@@ -22,7 +21,6 @@ module.exports = {
     devServer: {
         static: {
             directory: path.join(__dirname, "build"),
-            publicPath: '/',
         },
         port: 3001,
     },
