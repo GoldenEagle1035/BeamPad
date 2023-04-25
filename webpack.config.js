@@ -11,7 +11,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "public", "index.html"),
-
+            favicon: path.join(__dirname, "src/assets/images", "tokenixe.png"),
         }),
         new webpack.ProvidePlugin({
             Buffer: ['buffer', 'Buffer'],

@@ -42,7 +42,7 @@ import {
     Insights,
     Download
 } from '@mui/icons-material';
-import house_1 from '../assets/images/house-1.webp';
+import house_1 from '../assets/images/house-1.png';
 import map_1 from '../assets/images/map_01.png';
 
 import {

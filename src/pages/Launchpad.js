@@ -13,7 +13,7 @@ import {
     ExpandMore
 } from '@mui/icons-material';
 
-import LaunchpadPropertyItem from "../components/LaunchpadPropertyItem";
+import UpcomingPropertyItem from "../components/UpcomingPropertyItem";
 
 const Launchpad = () => {
 
@@ -56,17 +56,15 @@ const Launchpad = () => {
                         </div>
                         <div className="w-full lg:w-auto py-[5px] text-xs font-bold text-gray-500 text-center hover:cursor-pointer">Clear all filters</div>
                     </div>
-                    <div className="flex flex-col lg:flex-row justify-between">
-                        <LaunchpadPropertyItem />
-                        <LaunchpadPropertyItem />
-                        <LaunchpadPropertyItem />
-                        <LaunchpadPropertyItem />
-                    </div>
-                    <div className="flex flex-col lg:flex-row justify-between">
-                        <LaunchpadPropertyItem />
-                        <LaunchpadPropertyItem />
-                        <LaunchpadPropertyItem />
-                        <LaunchpadPropertyItem />
+                    <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                        <UpcomingPropertyItem />
+                        <UpcomingPropertyItem />
+                        <UpcomingPropertyItem />
+                        <UpcomingPropertyItem />
+                        <UpcomingPropertyItem />
+                        <UpcomingPropertyItem />
+                        <UpcomingPropertyItem />
+                        <UpcomingPropertyItem />
                     </div>
                 </div>
             </div>

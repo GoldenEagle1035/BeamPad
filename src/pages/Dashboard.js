@@ -1,12 +1,6 @@
 
 import { useEffect, useState } from "react";
 
-import bannerImg from '../assets/images/bannerImg.webp';
-
-import PropertyItem from "../components/PropertyItem";
-import MarketplacePropertyItem from "../components/MarketplacePropertyItem";
-import LaunchpadPropertyItem from "../components/LaunchpadPropertyItem";
-
 import {
     AccountCircle,
     Message,
@@ -17,6 +11,8 @@ import {
     Schedule,
     Person,
     Group,
+    Favorite,
+    Star,
 } from "@mui/icons-material";
 
 import {
@@ -31,6 +27,25 @@ import {
     Legend,
 } from 'chart.js';
 import { Line } from 'react-chartjs-2';
+
+import FeaturedPropertyItem from "../components/FeaturedPropertyItem";
+import UpcomingPropertyItem from "../components/UpcomingPropertyItem";
+import CompletedPropertyItem from "../components/CompletedPropertyItem";
+import NotableAsset from "../components/NotableAsset";
+
+import tether from '../assets/images/tether.png';
+import avatar_1 from '../assets/images/avatar-1.png';
+import avatar_2 from '../assets/images/avatar-2.png';
+import avatar_3 from '../assets/images/avatar-3.png';
+import avatar_4 from '../assets/images/avatar-4.png';
+import avatar_5 from '../assets/images/avatar-5.png';
+import avatar_6 from '../assets/images/avatar-6.png';
+import avatar_7 from '../assets/images/avatar-7.png';
+import avatar_8 from '../assets/images/avatar-8.png';
+import avatar_9 from '../assets/images/avatar-9.png';
+import avatar_10 from '../assets/images/avatar-10.png';
+import avatar_11 from '../assets/images/avatar-11.png';
+import avatar_12 from '../assets/images/avatar-12.png';
 
 ChartJS.register(
     CategoryScale,
@@ -108,7 +123,7 @@ const Dashboard = () => {
     }, [])
 
     return (
-        <div className="w-full flex flex-col gap-[10px] p-[30px]">
+        <div className="w-full flex flex-col gap-[30px] p-[30px]">
             {/* <div className="relative rounded-xl bg-[#dc275150]">
                 <img className="w-full h-[300px] object-cover rounded" src={bannerImg} alt="" />
                 <div className="absolute top-16 left-16 w-auto text-4xl font-bold text-white">Buy Your First Real Estate in Seconds</div>
@@ -117,21 +132,221 @@ const Dashboard = () => {
                 <button className="absolute top-44 left-72 w-[200px] p-[10px] rounded-xl bg-[#dc2751] border-1 border-white text-lg font-bold text-white text-center">HOW IT WORKS</button>
             </div> */}
             <div className="flex flex-col">
-                <div className="flex flex-row items-center justify-between">
+                <div className="flex flex-row items-center ">
                     <div className="flex flex-row gap-[10px] items-center">
                         <div className="text-xl font-bold text-gray-700">Featured Items</div>
-                        <div className="rounded-full px-[8px] bg-gray-700 text-basic text-white">5</div>
+                        {/* <div className="rounded-full px-[8px] bg-gray-700 text-basic text-white">5</div> */}
                     </div>
-                    <div className="text-basic text-[#377eff] hover:cursor-pointer">See All</div>
+                    {/* <div className="text-basic text-[#377eff] hover:cursor-pointer">See All</div> */}
                 </div>
-                <div className="flex flex-col lg:flex-row items-center justify-between">
-                    <PropertyItem />
-                    <MarketplacePropertyItem />
-                    <LaunchpadPropertyItem />
-                    <PropertyItem />
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <FeaturedPropertyItem />
+                    <FeaturedPropertyItem />
+                    <FeaturedPropertyItem />
+                    <FeaturedPropertyItem />
                 </div>
             </div>
-            <div className="m-0 lg:m-[10px] flex flex-col gap-[20px] rounded-xl border border-gray-300 p-[20px]">
+            <div className="flex flex-col">
+                <div className="flex flex-row items-center ">
+                    <div className="flex flex-row gap-[10px] items-center">
+                        <div className="text-xl font-bold text-gray-700">Upcoming Offerings</div>
+                        {/* <div className="rounded-full px-[8px] bg-gray-700 text-basic text-white">5</div> */}
+                    </div>
+                    {/* <div className="text-basic text-[#377eff] hover:cursor-pointer">See All</div> */}
+                </div>
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <UpcomingPropertyItem />
+                    <UpcomingPropertyItem />
+                    <UpcomingPropertyItem />
+                    <UpcomingPropertyItem />
+                </div>
+            </div>
+            <div className="flex flex-col">
+                <div className="flex flex-row items-center ">
+                    <div className="flex flex-row gap-[10px] items-center">
+                        <div className="text-xl font-bold text-gray-700">Completed Offerings</div>
+                        {/* <div className="rounded-full px-[8px] bg-gray-700 text-basic text-white">5</div> */}
+                    </div>
+                    {/* <div className="text-basic text-[#377eff] hover:cursor-pointer">See All</div> */}
+                </div>
+                <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                    <CompletedPropertyItem />
+                    <CompletedPropertyItem />
+                    <CompletedPropertyItem />
+                    <CompletedPropertyItem />
+                </div>
+            </div>
+            <div className="flex flex-col lg:flex-row gap-[30px]">
+                <div className="w-full lg:w-1/2 mx-[10px] flex flex-col gap-[30px]">
+                    <div className="flex flex-row gap-[10px] items-center">
+                        <div className="w-[30px] h-[30px] bg-[#377eff] rounded-full flex justify-center items-center">
+                            <Favorite className="text-white" sx={{ fontSize: 10 }} />
+                        </div>
+                        <div className="text-xl font-bold text-gray-700">Top Sellers</div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[30px]">
+                        <div className="flex flex-row gap-[10px] items-center">
+                            <img src={avatar_1} alt="" className="w-[70px] h-[70px] rounded-full border-2 border-[#377eff]" />
+                            <div className="flex flex-col gap-[5px]">
+                                <div className="text-basic font-bold text-gray-700">Nael G</div>
+                                <div className="flex flex-row gap-[5px]">
+                                    <img className="w-[15px] h-[15px] object-cover" src={tether} alt="" />
+                                    <div className="text-sm text-gray-500">163.72</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-[10px] items-center">
+                            <img src={avatar_2} alt="" className="w-[70px] h-[70px] rounded-full border-2 border-[#377eff]" />
+                            <div className="flex flex-col gap-[5px]">
+                                <div className="text-basic font-bold text-gray-700">Degen Demons</div>
+                                <div className="flex flex-row gap-[5px]">
+                                    <img className="w-[15px] h-[15px] object-cover" src={tether} alt="" />
+                                    <div className="text-sm text-gray-500">163.72</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-[10px] items-center">
+                            <img src={avatar_3} alt="" className="w-[70px] h-[70px] rounded-full border-2 border-[#377eff]" />
+                            <div className="flex flex-col gap-[5px]">
+                                <div className="text-basic font-bold text-gray-700">Bored Clowns</div>
+                                <div className="flex flex-row gap-[5px]">
+                                    <img className="w-[15px] h-[15px] object-cover" src={tether} alt="" />
+                                    <div className="text-sm text-gray-500">149.58</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-[10px] items-center">
+                            <img src={avatar_4} alt="" className="w-[70px] h-[70px] rounded-full border-2 border-[#377eff]" />
+                            <div className="flex flex-col gap-[5px]">
+                                <div className="text-basic font-bold text-gray-700">ZOOBKO</div>
+                                <div className="flex flex-row gap-[5px]">
+                                    <img className="w-[15px] h-[15px] object-cover" src={tether} alt="" />
+                                    <div className="text-sm text-gray-500">123.73</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-[10px] items-center">
+                            <img src={avatar_5} alt="" className="w-[70px] h-[70px] rounded-full border-2 border-[#377eff]" />
+                            <div className="flex flex-col gap-[5px]">
+                                <div className="text-basic font-bold text-gray-700">implyse</div>
+                                <div className="flex flex-row gap-[5px]">
+                                    <img className="w-[15px] h-[15px] object-cover" src={tether} alt="" />
+                                    <div className="text-sm text-gray-500">103.56</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-[10px] items-center">
+                            <img src={avatar_6} alt="" className="w-[70px] h-[70px] rounded-full border-2 border-[#377eff]" />
+                            <div className="flex flex-col gap-[5px]">
+                                <div className="text-basic font-bold text-gray-700">Skere</div>
+                                <div className="flex flex-row gap-[5px]">
+                                    <img className="w-[15px] h-[15px] object-cover" src={tether} alt="" />
+                                    <div className="text-sm text-gray-500">87.83</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="w-full lg:w-1/2 mx-[10px] flex flex-col gap-[30px]">
+                    <div className="flex flex-row gap-[10px]">
+                        <div className="w-[30px] h-[30px] bg-[#377eff] rounded-full flex justify-center items-center">
+                            <Star className="text-white" sx={{ fontSize: 10 }} />
+                        </div>
+                        <div className="text-xl font-bold text-gray-700">Top Buyers</div>
+                    </div>
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-y-[30px]">
+                        <div className="flex flex-row gap-[10px] items-center">
+                            <img src={avatar_7} alt="" className="w-[70px] h-[70px] rounded-full" />
+                            <div className="flex flex-col gap-[5px]">
+                                <div className="text-basic font-bold text-gray-700">Xiaoba_ART</div>
+                                <div className="flex flex-row gap-[5px]">
+                                    <img className="w-[15px] h-[15px] object-cover" src={tether} alt="" />
+                                    <div className="text-sm text-gray-500">123.1</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-[10px] items-center">
+                            <img src={avatar_8} alt="" className="w-[70px] h-[70px] rounded-full" />
+                            <div className="flex flex-col gap-[5px]">
+                                <div className="text-basic font-bold text-gray-700">J.pegVC</div>
+                                <div className="flex flex-row gap-[5px]">
+                                    <img className="w-[15px] h-[15px] object-cover" src={tether} alt="" />
+                                    <div className="text-sm text-gray-500">92.87</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-[10px] items-center">
+                            <img src={avatar_9} alt="" className="w-[70px] h-[70px] rounded-full" />
+                            <div className="flex flex-col gap-[5px]">
+                                <div className="text-basic font-bold text-gray-700">VISIONARY</div>
+                                <div className="flex flex-row gap-[5px]">
+                                    <img className="w-[15px] h-[15px] object-cover" src={tether} alt="" />
+                                    <div className="text-sm text-gray-500">83.43</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-[10px] items-center">
+                            <img src={avatar_10} alt="" className="w-[70px] h-[70px] rounded-full" />
+                            <div className="flex flex-col gap-[5px]">
+                                <div className="text-basic font-bold text-gray-700">Private Collector 1</div>
+                                <div className="flex flex-row gap-[5px]">
+                                    <img className="w-[15px] h-[15px] object-cover" src={tether} alt="" />
+                                    <div className="text-sm text-gray-500">64.54</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-[10px] items-center">
+                            <img src={avatar_11} alt="" className="w-[70px] h-[70px] rounded-full" />
+                            <div className="flex flex-col gap-[5px]">
+                                <div className="text-basic font-bold text-gray-700">Generation Wealth</div>
+                                <div className="flex flex-row gap-[5px]">
+                                    <img className="w-[15px] h-[15px] object-cover" src={tether} alt="" />
+                                    <div className="text-sm text-gray-500">61.98</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="flex flex-row gap-[10px] items-center">
+                            <img src={avatar_12} alt="" className="w-[70px] h-[70px] rounded-full" />
+                            <div className="flex flex-col gap-[5px]">
+                                <div className="text-basic font-bold text-gray-700">hichhaneh</div>
+                                <div className="flex flex-row gap-[5px]">
+                                    <img className="w-[15px] h-[15px] object-cover" src={tether} alt="" />
+                                    <div className="text-sm text-gray-500">49.22</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="flex flex-col">
+                <div className="flex flex-row items-center ">
+                    <div className="flex flex-row gap-[10px] items-center">
+                        <div className="text-xl font-bold text-gray-700">Notable Assets</div>
+                    </div>
+                </div>
+                <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                    <NotableAsset />
+                    <NotableAsset />
+                    <NotableAsset />
+                    <NotableAsset />
+                    <NotableAsset />
+                </div>
+            </div>
+            <div className="flex flex-col">
+                <div className="flex flex-row items-center ">
+                    <div className="flex flex-row gap-[10px] items-center">
+                        <div className="text-xl font-bold text-gray-700">Top property Buys</div>
+                    </div>
+                </div>
+                <div className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+                    <NotableAsset />
+                    <NotableAsset />
+                    <NotableAsset />
+                    <NotableAsset />
+                    <NotableAsset />
+                </div>
+            </div>
+            {/* <div className="m-0 lg:m-[10px] flex flex-col gap-[20px] rounded-xl border border-gray-300 p-[20px]">
                 <div className="flex flex-row justify-between">
                     <div className="text-xl font-bold text-gray-700">Users</div>
                     <div className="flex flex-row py-[5px] rounded-lg border border-gray-300">
@@ -212,8 +427,8 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="m-0 lg:m-[10px] h-full flex flex-row justify-between items-center rounded-xl border border-gray-300 p-[20px]">
+            </div> */}
+            {/* <div className="m-0 lg:m-[10px] h-full flex flex-row justify-between items-center rounded-xl border border-gray-300 p-[20px]">
                 <div className="w-[150px] h-auto lg:h-[150px] p-[20px] flex flex-col justify-center rounded-xl bg-[#ebf4f3]">
                     <div className="w-[50px] h-[50px] bg-white rounded-full flex justify-center items-center mb-[20px]">
                         <AccountCircle className="text-[#377eff]" sx={{ fontSize: 30 }} />
@@ -242,8 +457,8 @@ const Dashboard = () => {
                     <div className="text-basic font-bold text-gray-700">$285,56</div>
                     <div className="text-sm text-gray-400">Average Use</div>
                 </div>
-            </div>
-            <div className="flex flex-col lg:flex-row gap-[10px]">
+            </div> */}
+            {/* <div className="flex flex-col lg:flex-row gap-[10px]">
                 <div className="w-full lg:w-1/2 m-0 lg:m-[10px] flex flex-col gap-[20px] rounded-xl border border-gray-300 p-[20px]">
                     <div className="flex flex-row justify-between">
                         <div className="text-xl font-bold text-gray-700">Statistics</div>
@@ -305,7 +520,7 @@ const Dashboard = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> */}
 
         </div>
     );

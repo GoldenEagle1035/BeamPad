@@ -9,7 +9,7 @@ import {
 } from '@mui/icons-material';
 import profile_banner from '../assets/images/profile_banner.png';
 
-import ProfilePropertyItem from "../components/ProfilePropertyItem";
+import CompletedPropertyItem from "../components/CompletedPropertyItem";
 
 const Profileboard = () => {
 
@@ -54,10 +54,10 @@ const Profileboard = () => {
                             <div className="text-basic text-[#377eff] hover:cursor-pointer">View All</div>
                         </div>
                     </div>
-                    <div className="flex flex-col lg:flex-row justify-between gap-[10px] px-[10px]">
-                        <ProfilePropertyItem />
-                        <ProfilePropertyItem />
-                        <ProfilePropertyItem />
+                    <div className="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3">
+                        <CompletedPropertyItem />
+                        <CompletedPropertyItem />
+                        <CompletedPropertyItem />
                     </div>
                 </div>
             </div>
